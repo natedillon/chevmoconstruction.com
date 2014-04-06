@@ -7,6 +7,7 @@
 		<title>Chevmo Construction</title>
 
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="description" content="Residential, Commercial, New Construction, Remodeling" />
 		<meta name="author" content="D. Nathan Dillon" />
@@ -29,9 +30,15 @@
 			}
 
 			.content {
-				width: 460px;
+				width: 300px;
 				margin: 40px auto;
 				text-align: center;
+			}
+
+			@media (min-width: 480px) {
+				.content {
+					width: 460px;
+				}
 			}
 
 			.logo {
@@ -54,7 +61,7 @@
 
 			.social ul li {
 				display: inline;
-				margin: 0 20px 0 0;
+				margin: 0 10px;
 				padding: 0;
 			}
 
