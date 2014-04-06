@@ -77,6 +77,16 @@
 				text-decoration: underline;
 			}
 
+			.facebook {
+				display: none;
+			}
+
+			@media (min-width: 480px) {
+				.facebook {
+					display: block;
+				}
+			}
+
 		</style>
 
 	</head>
