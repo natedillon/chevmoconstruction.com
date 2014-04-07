@@ -13,10 +13,15 @@ a {
     &:link,
     &:visited {
         color: #00A3CB;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
     }
 
     &:hover,
-    &:active {}
+    &:active {
+    }
 
 }
 
@@ -44,36 +49,127 @@ a {
 }
 
 .social {
+    clear: both;
+    float: left;
+    width: 100%;
     margin-bottom: 40px;
-}
-
-.social {
 
     ul {
+        float: left;
+        width: 100%;
         margin: 0;
         padding: 0;
         list-style-type: none;
 
         li {
-            display: inline;
-            margin: 0 10px;
+            float: left;
+            width: 48%;
+            margin: 1%;
             padding: 0;
+
+            a {
+                display: block;
+                padding: 8px 12px;
+                text-align: left;
+                text-decoration: none;
+                white-space: no-wrap;
+
+                &:link,
+                &:visited {
+                    color: #777;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                }
+
+                &:hover,
+                &:active {
+                    border-color: #777;
+                }
+
+            }
+
+            &.social-facebook a {
+
+                &:link i,
+                &:visited i {
+                    color: #3B5998;
+                }
+
+                &:hover,
+                &:active {
+                }
+
+            }
+
+            &.social-twitter a {
+
+                &:link i,
+                &:visited i {
+                    color: #55ACEE;
+                }
+
+                &:hover,
+                &:active {
+                }
+
+            }
+
+            &.social-instagram a {
+
+                &:link i,
+                &:visited i {
+                    color: #517fA4;
+                }
+
+                &:hover,
+                &:active {
+                }
+
+            }
+
+            &.social-pinterest a {
+
+                &:link i,
+                &:visited i {
+                    color: #CC2127;
+                }
+
+                &:hover,
+                &:active {
+                }
+
+            }
+
         }
 
     }
 
-    a {
+}
 
-        &:link,
-        &:visited {
-            display: inline-block;
-            text-decoration: none;
-            white-space: no-wrap;
-        }
+@media (min-width: 480px) {
 
-        &:hover span,
-        &:active span {
-            text-decoration: underline;
+    .social {
+        font-size: 21px; font-size: 2.1rem;
+
+        ul {
+
+            li {
+
+                a {
+                    padding: 10px 15px;
+
+                    &:link,
+                    &:visited {
+                    }
+
+                    &:hover,
+                    &:active {
+                    }
+
+                }
+
+            }
+
         }
 
     }
@@ -85,7 +181,10 @@ a {
 }
 
 @media (min-width: 480px) {
+
     .facebook {
+        clear: both;
         display: block;
     }
+
 }
