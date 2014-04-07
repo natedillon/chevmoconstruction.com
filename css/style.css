@@ -1,0 +1,108 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+a:link,
+a:visited {
+  color: #00A3CB;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.content {
+  width: 300px;
+  margin: 40px auto;
+  text-align: center;
+}
+@media (min-width: 480px) {
+  .content {
+    width: 460px;
+  }
+}
+.logo {
+  margin-bottom: 20px;
+}
+.logo img {
+  width: 100%;
+}
+.social {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+.social ul {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.social ul li {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 0;
+}
+.social ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-align: left;
+  text-decoration: none;
+  white-space: no-wrap;
+}
+.social ul li a:link,
+.social ul li a:visited {
+  color: #777;
+  background-color: white;
+  border: 1px solid #bbb;
+}
+.social ul li a:hover,
+.social ul li a:active {
+  border-color: #555;
+}
+.social ul li.social-facebook a:link i,
+.social ul li.social-facebook a:visited i {
+  color: #3B5998;
+}
+.social ul li.social-twitter a:link i,
+.social ul li.social-twitter a:visited i {
+  color: #55ACEE;
+}
+.social ul li.social-instagram a:link i,
+.social ul li.social-instagram a:visited i {
+  color: #517fA4;
+}
+.social ul li.social-pinterest a:link i,
+.social ul li.social-pinterest a:visited i {
+  color: #CC2127;
+}
+@media (min-width: 480px) {
+  .social {
+    font-size: 21px;
+    font-size: 2.1rem;
+  }
+  .social ul li a {
+    padding: 10px 15px;
+  }
+}
+.facebook {
+  display: none;
+}
+@media (min-width: 480px) {
+  .facebook {
+    clear: both;
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+}
