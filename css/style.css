@@ -25,19 +25,37 @@ a:visited {
     width: 460px;
   }
 }
+.social,
+.facebook,
+footer {
+  clear: both;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+.social:before,
+.facebook:before,
+footer:before,
+.social:after,
+.facebook:after,
+footer:after {
+  content: " ";
+  display: table;
+}
+.social:after,
+.facebook:after,
+footer:after {
+  clear: both;
+}
 .logo {
-  margin-bottom: 20px;
+  margin: 0;
 }
 .logo img {
   width: 100%;
 }
 .social {
-  clear: both;
   float: left;
   width: 100%;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
 }
 .social ul {
   float: left;
@@ -99,10 +117,18 @@ a:visited {
 }
 @media (min-width: 480px) {
   .facebook {
-    clear: both;
     display: block;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
+    float: left;
+    width: 100%;
   }
+}
+footer {
+  float: left;
+  width: 100%;
+  color: #999;
+}
+footer .copyright {
+  margin: 0;
+  font-size: 13px;
+  font-size: 1.3rem;
 }

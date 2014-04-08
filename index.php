@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -64,7 +65,11 @@
 				<div class="fb-like" data-href="http://www.facebook.com/chevmoconstructionllc" data-send="true" data-width="450" data-show-faces="true"></div>
 			</div> <!-- end .facebook -->
 
-		</div>
+			<footer role="contentinfo">
+				<p class="copyright">Copyright &copy; <?= date('Y'); ?> Chevmo Construction, 918.904.9577</p>
+			</footer>
+
+		</div> <!-- end .content -->
 
 		<script type="text/javascript">
 

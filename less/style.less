@@ -25,6 +25,17 @@ a {
 
 }
 
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 .content {
     width: 300px;
     margin: 40px auto;
@@ -39,8 +50,18 @@ a {
 
 }
 
+.social,
+.facebook,
+footer {
+    .clearfix();
+    clear: both;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
 .logo {
-    margin-bottom: 20px;
+    margin: 0;
 
     img {
         width: 100%;
@@ -49,12 +70,8 @@ a {
 }
 
 .social {
-    clear: both;
     float: left;
     width: 100%;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
 
     ul {
         float: left;
@@ -185,11 +202,21 @@ a {
 @media (min-width: 480px) {
 
     .facebook {
-        clear: both;
         display: block;
-        margin-bottom: 20px;
-        padding-top: 20px;
-        border-top: 1px solid #ddd;
+        float: left;
+        width: 100%;
+    }
+
+}
+
+footer {
+    float: left;
+    width: 100%;
+    color: #999;
+
+    .copyright {
+        margin: 0;
+        font-size: 13px; font-size: 1.3rem;
     }
 
 }
