@@ -1,134 +1,161 @@
 html {
   font-size: 62.5%;
 }
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
 }
-a:link,
-a:visited {
-  color: #00A3CB;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.content {
-  width: 300px;
-  margin: 40px auto;
-  text-align: center;
-}
-@media (min-width: 480px) {
-  .content {
-    width: 460px;
+
+a {
+  &:link,
+  &:visited {
+    color: #00a3cb;
+    transition: all 0.2s linear;
   }
 }
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 480px) 1fr;
+  grid-template-rows: 1fr auto auto auto auto 1fr;
+  grid-template-areas:
+    '. . .'
+    '. header .'
+    '. social .'
+    '. facebook .'
+    '. footer .'
+    '. . .';
+  min-height: 100vh;
+  margin: 10px;
+  text-align: center;
+}
+
 .social,
 .facebook,
-footer {
-  clear: both;
+.footer {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
 }
-.social:before,
-.facebook:before,
-footer:before,
-.social:after,
-.facebook:after,
-footer:after {
-  content: " ";
-  display: table;
+
+.header {
+  grid-area: header;
+
+  .logo {
+    margin: 0;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
-.social:after,
-.facebook:after,
-footer:after {
-  clear: both;
-}
-.logo {
-  margin: 0;
-}
-.logo img {
-  width: 100%;
-}
+
 .social {
-  float: left;
-  width: 100%;
+  grid-area: social;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: 8px 12px;
+        text-align: left;
+        text-decoration: none;
+        white-space: no-wrap;
+
+        &:link,
+        &:visited {
+          color: #777;
+          background-color: white;
+          border: 1px solid #bbb;
+        }
+
+        &:hover,
+        &:active {
+          border-color: #555;
+        }
+      }
+
+      &.social-facebook a {
+        &:link i,
+        &:visited i {
+          color: #3b5998;
+        }
+      }
+
+      &.social-twitter a {
+        &:link i,
+        &:visited i {
+          color: #55acee;
+        }
+      }
+
+      &.social-instagram a {
+        &:link i,
+        &:visited i {
+          color: #517fa4;
+        }
+      }
+
+      &.social-pinterest a {
+        &:link i,
+        &:visited i {
+          color: #cc2127;
+        }
+      }
+    }
+  }
 }
-.social ul {
-  float: left;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.social ul li {
-  float: left;
-  width: 48%;
-  margin: 1%;
-  padding: 0;
-}
-.social ul li a {
-  display: block;
-  padding: 8px 12px;
-  text-align: left;
-  text-decoration: none;
-  white-space: no-wrap;
-}
-.social ul li a:link,
-.social ul li a:visited {
-  color: #777;
-  background-color: white;
-  border: 1px solid #bbb;
-}
-.social ul li a:hover,
-.social ul li a:active {
-  border-color: #555;
-}
-.social ul li.social-facebook a:link i,
-.social ul li.social-facebook a:visited i {
-  color: #3B5998;
-}
-.social ul li.social-twitter a:link i,
-.social ul li.social-twitter a:visited i {
-  color: #55ACEE;
-}
-.social ul li.social-instagram a:link i,
-.social ul li.social-instagram a:visited i {
-  color: #517fA4;
-}
-.social ul li.social-pinterest a:link i,
-.social ul li.social-pinterest a:visited i {
-  color: #CC2127;
-}
-@media (min-width: 480px) {
+
+@media (min-width: 400px) {
   .social {
-    font-size: 21px;
     font-size: 2.1rem;
-  }
-  .social ul li a {
-    padding: 10px 15px;
+
+    ul {
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        a {
+          padding: 10px 15px;
+        }
+      }
+    }
   }
 }
+
 .facebook {
+  grid-area: facebook;
   display: none;
 }
+
 @media (min-width: 480px) {
   .facebook {
     display: block;
-    float: left;
     width: 100%;
   }
 }
-footer {
-  float: left;
-  width: 100%;
+
+.footer {
+  grid-area: footer;
   color: #999;
-}
-footer .copyright {
-  margin: 0;
-  font-size: 13px;
-  font-size: 1.3rem;
+
+  .copyright {
+    margin: 0;
+    font-size: 1.3rem;
+  }
 }
